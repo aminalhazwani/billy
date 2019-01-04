@@ -10,7 +10,7 @@
   </head>
   <body class="pa3 pa4-m pa5-l bg-near-white sans-serif">
     <p class="tc fw7 mb5">Currently reading</p>
-    <ul class="list pl0 flex flex-wr items-endap">
+    <ul class="list pl0 flex flex-wr items-end">
       {% assign sorted_books = site.data.books | sort: 'Title' %}
       {% for book in sorted_books %}
         {% if book['Exclusive Shelf'] == 'currently-reading' %}
