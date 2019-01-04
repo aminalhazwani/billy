@@ -1,0 +1,55 @@
+---
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Billy, not your ordinary IKEA bookcase.</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  </head>
+  <body class="pa3 pa4-m pa5-l bg-near-white sans-serif">
+    <p class="tc fw7 mb5">Currently reading</p>
+    <ul class="list pl0 flex flex-wr items-endap">
+      {% assign sorted_books = site.data.books | sort: 'Title' %}
+      {% for book in sorted_books %}
+        {% if book['Exclusive Shelf'] == 'currently-reading' %}
+          <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <p class="dn">
+              {{ book.Title }},
+              {{ book.Author }}
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <p class="tc fw7 mb5">Read</p>
+    <ul class="list pl0 flex flex-wrap items-end">
+      {% for book in sorted_books %}
+        {% if book['Exclusive Shelf'] == 'read' %}
+          <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <p class="dn">
+              {{ book.Title }},
+              {{ book.Author }}
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <p class="tc fw7 mb5">Want to read</p>
+    <ul class="list pl0 flex flex-wrap items-end">
+      {% for book in sorted_books %}
+        {% if book['Exclusive Shelf'] == 'to-read' %}
+          <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <p class="dn">
+              {{ book.Title }},
+              {{ book.Author }}
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </body>
+</html>

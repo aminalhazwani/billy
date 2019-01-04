@@ -1,0 +1,5 @@
+# Ignore Jekyll generated files
+_site
+
+# Ignore junk files
+.DS_Store
