@@ -15,7 +15,7 @@
       {% for book in sorted_books %}
         {% if book['Exclusive Shelf'] == 'currently-reading' %}
           <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
-            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="Book cover of {{ book.Title }} by {{ book.Author }}">
             <p class="dn">
               {{ book.Title }},
               {{ book.Author }}
@@ -29,7 +29,7 @@
       {% for book in sorted_books %}
         {% if book['Exclusive Shelf'] == 'read' %}
           <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
-            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="Book cover of {{ book.Title }} by {{ book.Author }}">
             <p class="dn">
               {{ book.Title }},
               {{ book.Author }}
@@ -43,7 +43,7 @@
       {% for book in sorted_books %}
         {% if book['Exclusive Shelf'] == 'to-read' %}
           <li class="w-50 w-third-m w-25-l bb bw3 b--near-black mb5">
-            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="">
+            <img class="db w-70 w-60-m w-50-l center" src="https://images.gr-assets.com/books/{{ book['Cover Id'] }}/{{ book['Book Id'] }}.jpg" alt="Book cover of {{ book.Title }} by {{ book.Author }}">
             <p class="dn">
               {{ book.Title }},
               {{ book.Author }}
